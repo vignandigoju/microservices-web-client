@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: departmentDoctors
+  config:
+    import: optional:configserver:http://localhost:8088

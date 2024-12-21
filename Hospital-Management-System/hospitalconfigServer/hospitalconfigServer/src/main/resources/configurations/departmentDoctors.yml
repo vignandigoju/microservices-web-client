@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: departmentDoctors
+
+  datasource:
+    url: jdbc:h2:mem:testdb # In-memory H2 database
+    username: sa # Default username for H2
+    password: password # Default password for H2
+    driver-class-name: org.h2.Driver
+    platform: h2
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.H2Dialect
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+    generate-ddl: true
+
+server:
+  port: 9093
